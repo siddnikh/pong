@@ -1,0 +1,40 @@
+This document just contains some of the notes I found worthy taking, during the course of GD50 lecture, Pong.
+
+Extremely important functions:
+love.load() - to initialise the game
+love.update(dt) - to change the state of the game, with respect to every frame changed in the time dt.
+love.draw() - to draw anything and everything on your output screen.
+love.keypressed(key) - executes itself whenever a specific key is pressed. 
+push: apply('start') and push: apply('end') - anything between these is there.
+Functions:
+//Day-zero:
+love.graphics.printf(text, x, y, [width], [align])
+love.window.setMode(width, height, params) - to initialize the window's dimensions, and set parameters for vsync, fullscreen and if the window is resizable after startup or not.
+
+//Low-Res-Update
+love.graphics.setDefaultFilter(min, mag) - for texture scaling. We use nearest-neighbor filtering for perfect pixel upscaling and downscaling.
+love.event.quit() - terminates the application
+push: setupScreen(virtualWidth, virtualHeight, windowWidth, windowHeight, params) - same as love.window.setMode() except it can create an extra virtual screen. The params are same as that of the other function.
+
+//the-rectangle-update
+love.graphics.newFont(path, size) - you can assign a variable a new font with a specific font size and then use it later.
+love.graphics.setFont(font) - the variable you assigned the newFont thing to, you place it here and everything below this statement will be affected by this font.
+love.graphics.clear(r, g, b, a) - sets a background color as defined by the rgb values and alpha opacity.
+love.graphics.rectangle(mode, x, y, width, height) - draws a rectangle on the screen as you specify.
+
+//the-paddle-update
+love.keyboard.isDown(key) - returns a boolean depending on if the specific key is pressed down or not. The difference between this and keypressed(key) is that the latter returns true only when the key is initially pressed, whereas this keeps returning true if it is held down.
+
+//the-ball-update
+math.randomseed(num) - Basically gives a random value depending on the number you insert. Thus, provides with inconsistency. We "seed" our machine with this value.
+os.time() - returns UNIX epoch time
+math.random(min, max) - returns a random number between the specified range.
+math.min(num1, num2) - returns the smaller number of the 2.
+math.max(num1, num2) - returns the bigger number of the 2.
+
+//FPS-update
+love.window.setTitle(title) - set the window title as however you want.
+love.timer.getFPS() - get FPS rate of the running game
+
+//sounds-update
+love.audio.newSource(path, type - static or stream)
