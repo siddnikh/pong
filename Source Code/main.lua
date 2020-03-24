@@ -169,7 +169,7 @@ function love.draw()
     if servingPlayer == 1 then
         love.graphics.printf("Player 1, serve!", 0, 44, virtualWidth, 'center')
     else
-        love.graphics.printf("Computer's serve! Press Enter when ready.", 0, 44, virtualWidth, 'center')
+        love.graphics.printf("Press Enter when ready", 0, 44, virtualWidth, 'center')
     end
         love.graphics.printf( "Press Enter to serve", --text
         0,              --X coordinate
@@ -202,6 +202,5 @@ function love.draw()
     ball:render()
     love.graphics.setFont(love.graphics.newFont('font.ttf', 6))
     love.graphics.setDefaultFilter('linear', 'linear')
-    love.graphics.printf("Created  by  Siddharth  Nikhil,  as  a  part  of  GD50.", 0, virtualHeight - 10, virtualWidth, 'right' )
     push: apply('end')
 end
