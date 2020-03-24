@@ -5,4 +5,4 @@ The source code can be seen in the source code folder, and to anyone using Windo
 
 Press 'w' to move your paddle up, and 's' to move it down. The other paddle moves itself. Press 'Enter' to start or serve and 'Esc' to quit the game. The first one to achieve 10 points wins.
 
-This has been done as an assignment for the GD50 course from HarvardX. Thanks for viewing :) 
+This has been done as assignment 0 for the GD50 course from HarvardX. Thanks for viewing :) 
